@@ -9,6 +9,11 @@ app.listen(3000);
 app.get('/' ,(req,res)=>{
     res.send("HELLO");
 })
+
+app.get('/a' ,(req,res)=>{
+    res.send("HELLO A");
+})
+
 app.use((req, res) => {
     res.send("404");
 })
