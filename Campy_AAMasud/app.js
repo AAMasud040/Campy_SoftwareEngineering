@@ -14,6 +14,10 @@ app.get('/a' ,(req,res)=>{
     res.send("HELLO A");
 })
 
+app.get('/b' ,(req,res)=>{
+    res.send("HELLO B");
+})
+
 app.use((req, res) => {
     res.send("404");
 })
