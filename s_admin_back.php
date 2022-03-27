@@ -2,6 +2,7 @@
    function func(){
     include "db_connect.php";
     //add university
+    echo" <div class='admin_form'>";
     if(isset($_POST['Add_uni']))
     {
         echo "<form action='' method='POST'>
@@ -324,5 +325,8 @@
          }
     }
     //end of remove admin
+
+    echo "</div>";
    }
+
 ?>

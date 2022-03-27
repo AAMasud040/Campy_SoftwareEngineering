@@ -63,10 +63,21 @@ li a:hover {
     background-color: aquamarine; */
     height: 100%;
     width: 100%;
+    align-items: center;
+    border: 1px solid red;
   }
 
 .admin_form{
-
+  position:absolute;
+  width: 50%;
+  height: 70%;
+  background-position: center;
+  background-size: cover;
+  background-color: rgba(86, 94, 94, 0.877);
+  padding: 55px;
+  box-sizing: border-box;
+  backface-visibility: hidden;
+  box-shadow: 0 0 40px 20px rgba(0,0,0,0.26);
 }
   
   .input-box{
