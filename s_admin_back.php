@@ -53,5 +53,14 @@
            
      </form>";
     }
+
+    //add tag
+    if(isset($_POST['add_tag']))
+    {
+     echo "<form action='' method='POST'>
+     <input name='tag_name' type='text' class='input-box' placeholder='Tag' required name='' id=''>
+     <button name='add_to_tag' type='submit' class='submit- '>Add</button>            
+     </form>";
+    }
    }
 ?>
