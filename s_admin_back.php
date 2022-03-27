@@ -26,10 +26,13 @@
     {
         echo" <div class='admin_form'>";
          echo "<form action='' method='POST'>
+         <label>To deactive, input user name and click to deactive</label>
          <input name='university_id' type='text' class='input-box' placeholder='university id' required name='' id=''>
-         <button name='deactive_s' type='submit' class='submit-btn'>Deactive</button><br>
+         <button name='deactive_s' type='submit' class='submit-btn'>Deactive</button><br><br>
          </form>";
          echo "<form action='' method='POST'>
+         <br>
+         <label>To active, input user name and click to active</label>
          <input name='university_id' type='text' class='input-box' placeholder='university id' required name='' id=''>
          <button name='active_s' type='submit' class='submit-btn'>Active</button>     
          </form>";
@@ -49,13 +52,13 @@
 
      <input name='pass' type='password' class='input-box' placeholder='password' required name='' id=''>
 
-     <button name='add_admin' type='submit' class='submit- '>Add admin</button>
+     <button name='add_admin' type='submit' class='submit-btn'>Add admin</button>
            
      </form>";
 
      echo "<form action='' method='POST'>
      <input name='admin_u_name' type='text' class='input-box' placeholder='User Name' required name='' id=''>
-     <button name='remove_admin' type='submit' class='submit- '>Remove admin</button>
+     <button name='remove_admin' type='submit' class='submit-btn'>Remove admin</button>
            
      </form>";
      echo "</div>";
@@ -67,7 +70,7 @@
         echo" <div class='admin_form'>";
      echo "<form action='' method='POST'>
      <input name='tag_name' type='text' class='input-box' placeholder='Tag' required name='' id=''>
-     <button name='add_to_tag' type='submit' class='submit- '>Add</button>            
+     <button name='add_to_tag' type='submit' class='submit-btn'>Add</button>            
      </form>";
      echo "</div>";
     }
