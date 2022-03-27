@@ -93,5 +93,38 @@
          }
      }
     }
+
+    //University list
+    if(isset($_POST['uni_list']))
+    {
+        $qry =  "SELECT*
+                FROM university";
+        $result =mysqli_query($conn, $qry);
+        $count = mysqli_num_rows($result);
+        if($count>0){
+            echo "<table border=1>
+            <tr>
+              <th>University Name</th>
+              <th>Status</th>
+              <th>Email</th>
+            </tr>";
+            while($row = mysqli_fetch_assoc($result)){
+                $varsity_name = $row['university_name'];
+                $status = $row['approval'];
+                $email = $row['university_email'];
+                if($status==1){
+                    $avtivity = 'active';
+                }
+                else{
+                    $avtivity = 'deactive';
+                }
+                echo "<tr>
+                 <td >$varsity_name</td>
+                 <td >$avtivity</td>
+                 <td >$email</td>
+                 </tr>";
+            }
+        }
+    }
    }
 ?>
