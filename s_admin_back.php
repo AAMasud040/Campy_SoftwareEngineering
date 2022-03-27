@@ -46,6 +46,7 @@
     {
     echo" <div class='admin_form'>";
      echo "<form action='' method='POST'>
+     <label><h3>Add Admin</h3></label>
      <input name='admin_u_name' type='text' class='input-box' placeholder='User Name' required name='' id=''>
 
      <input name='university_id' type='text' class='input-box' placeholder='University Id' required name='' id=''>
@@ -56,7 +57,8 @@
            
      </form>";
 
-     echo "<form action='' method='POST'>
+     echo "<form action='' method='POST'><br><br>
+     <label><h3>Remove Admin</h3></label>
      <input name='admin_u_name' type='text' class='input-box' placeholder='User Name' required name='' id=''>
      <button name='remove_admin' type='submit' class='submit-btn'>Remove admin</button>
            

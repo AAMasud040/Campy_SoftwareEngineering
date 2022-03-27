@@ -83,12 +83,13 @@ li a:hover {
   background-color: rgb(0, 183, 255);
   position: relative;
   text-align: center;
+  border-radius: 20px;
   
 }
   
   .input-box{
     width: 50%;
-    background: rgba(11, 68, 224, 0.411);
+    background: rgba(209, 212, 221, 0.678);
     border: 1px solid rgb(38, 20, 202);
     margin:6px 0;
     height: 32px;
