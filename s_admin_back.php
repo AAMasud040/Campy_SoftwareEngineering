@@ -228,5 +228,26 @@
         }
     }
     //end of deactive university
+
+    //add a tag to tag table
+    if(isset($_POST['add_to_tag'])){
+        $tag_name = $_POST['tag_name'];
+        $tag_check = "SELECT *
+                      FROM tag
+                      WHERE tag_name = '$tag_name'";
+        $result = mysqli_query($conn, $tag_check);
+        $count = mysqli_num_rows($result);
+        if($count>0){
+            echo '<script>alert("This tag  is already exist")</script>';
+        }
+        else {
+            $qry = "INSERT INTO tag(tag_name, status)
+                    VALUES('$tag_name', 1)";
+            mysqli_query($conn, $qry);
+            echo '<script>alert("successfully added")</script>';
+        }
+        
+        }
+        //end of add a tag to tag table
    }
 ?>
