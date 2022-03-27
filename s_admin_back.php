@@ -62,5 +62,36 @@
      <button name='add_to_tag' type='submit' class='submit- '>Add</button>            
      </form>";
     }
+
+    //tag request
+    if(isset($_POST['tag_requ']))
+    {
+     $qry = "SELECT *
+             FROM tag
+             WHERE status=0";
+     $result = mysqli_query($conn, $qry);
+     $count = mysqli_num_rows($result);
+     if($count==0){
+         echo "<h2>No Pending Tag<h2>";
+     }
+     else{
+         echo"<table border=1>
+         <tr>
+           <th>Tag Name</th>
+           <th>Status</th>
+         </tr>";
+         while($row = mysqli_fetch_assoc($result)){
+             $tag_name = $row['tag_name'];
+             $status = $row['status'];
+             echo "<tr> <form action='' method='POST'>
+                 <td><input type='hidden' name='tag_name' value='$tag_name'/>$tag_name</input></td>
+                 // <td><input type='hidden' name='tag_status' value='$status'/>$status</input></td>
+                 <td><button type='submit' name='tag_approve'>Approve</button></td>
+                 <td><button type='submit' name='tag_reject'>Reject</button></td>
+                 </form>
+                 </tr>";
+         }
+     }
+    }
    }
 ?>
