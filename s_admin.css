@@ -71,9 +71,9 @@ li a:hover {
   position:absolute;
   width: 50%;
   height: 70%;
-  background-position: center;
-  background-size: cover;
-  background-color: rgba(86, 94, 94, 0.877);
+  /* background-position: center;
+  background-size: cover; */
+  background-color: rgba(100, 109, 109, 0.877);
   padding: 55px;
   box-sizing: border-box;
   backface-visibility: hidden;
@@ -82,7 +82,7 @@ li a:hover {
   
   .input-box{
     width: 100%;
-    background:transparent;
+    background: rgba(255, 255, 255, 0.411);
     border: 1px solid #fff;
     margin:6px 0;
     height: 32px;

@@ -42,9 +42,9 @@
 
     <!-- inner body -->
     <div class="container">
-        <div class="admin_form">
+       
           <?php func(); ?> 
-        </div>
+        
         </div>
     </div>
 

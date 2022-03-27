@@ -2,9 +2,10 @@
    function func(){
     include "db_connect.php";
     //add university
-    echo" <div class='admin_form'>";
+   
     if(isset($_POST['Add_uni']))
     {
+        echo" <div class='admin_form'>";
         echo "<form action='' method='POST'>
          <input name='admin_u_name' type='text' class='input-box' placeholder='User Name' required name='' id=''>
 
@@ -17,11 +18,13 @@
          <button name='add_uni' type='submit' class='submit-btn'>Add University</button>
                
          </form>";
+         echo "</div>";
     }
 
     // university status
     if(isset($_POST['Uni_status']))
     {
+        echo" <div class='admin_form'>";
          echo "<form action='' method='POST'>
          <input name='university_id' type='text' class='input-box' placeholder='university id' required name='' id=''>
          <button name='deactive_s' type='submit' class='submit-btn'>Deactive</button><br>
@@ -30,6 +33,7 @@
          <input name='university_id' type='text' class='input-box' placeholder='university id' required name='' id=''>
          <button name='active_s' type='submit' class='submit-btn'>Active</button>     
          </form>";
+         echo "</div>";
 
      
     }
@@ -37,6 +41,7 @@
     // manage admin
     if(isset($_POST['mng_admin']))
     {
+    echo" <div class='admin_form'>";
      echo "<form action='' method='POST'>
      <input name='admin_u_name' type='text' class='input-box' placeholder='User Name' required name='' id=''>
 
@@ -53,15 +58,18 @@
      <button name='remove_admin' type='submit' class='submit- '>Remove admin</button>
            
      </form>";
+     echo "</div>";
     }
 
     //add tag
     if(isset($_POST['add_tag']))
     {
+        echo" <div class='admin_form'>";
      echo "<form action='' method='POST'>
      <input name='tag_name' type='text' class='input-box' placeholder='Tag' required name='' id=''>
      <button name='add_to_tag' type='submit' class='submit- '>Add</button>            
      </form>";
+     echo "</div>";
     }
 
     //tag request
@@ -84,6 +92,7 @@
          while($row = mysqli_fetch_assoc($result)){
              $tag_name = $row['tag_name'];
              $status = $row['status'];
+             echo" <div class='admin_form'>";
              echo "<tr> <form action='' method='POST'>
                  <td><input type='hidden' name='tag_name' value='$tag_name'/>$tag_name</input></td>
                  // <td><input type='hidden' name='tag_status' value='$status'/>$status</input></td>
@@ -91,6 +100,7 @@
                  <td><button type='submit' name='tag_reject'>Reject</button></td>
                  </form>
                  </tr>";
+            echo "</div>";
          }
      }
     }
@@ -326,7 +336,7 @@
     }
     //end of remove admin
 
-    echo "</div>";
+   
    }
 
 ?>
