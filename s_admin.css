@@ -75,12 +75,12 @@ li a:hover {
   height: 70%;
   /* background-position: center;
   background-size: cover; */
-  background-color: transparent;
+  /* background-color: transparent; */
   padding: 55px;
   box-sizing: border-box;
   backface-visibility: hidden;
   box-shadow: 0 0 40px 20px rgba(0,0,0,0.26);
-  background-color: rgb(0, 183, 255);
+  background-color: lightgray;
   position: relative;
   text-align: center;
   border-radius: 20px;
