@@ -323,5 +323,6 @@
             echo '<script>alert("This user id is not exist")</script>';  
          }
     }
+    //end of remove admin
    }
 ?>

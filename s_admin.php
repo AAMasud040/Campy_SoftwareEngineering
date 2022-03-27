@@ -36,5 +36,11 @@
     </form>
     </div>
 
+    <!-- inner body -->
+    <div>
+        <?php func(); ?> 
+  
+    </div>
+
 </body>
 </html>
