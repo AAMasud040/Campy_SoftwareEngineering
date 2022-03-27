@@ -198,5 +198,35 @@
         }
     }
     //end of active university
+
+    //deactive university
+    if(isset($_POST['deactive_s'])){
+        $university_id = $_POST['university_id'];
+        $qry = "SELECT *
+                FROM university
+                WHERE university_id = $university_id";
+        $result =mysqli_query($conn, $qry);
+        $count = mysqli_num_rows($result);
+        if($count==0){
+            echo '<script>alert("University Does not exist")</script>';
+        }
+        else{
+            while($row = mysqli_fetch_assoc($result)){
+                $status = $row['approval'];
+                $university_name = $row['university_name'];
+                if($status==0){
+                    echo '<script>alert("University is already deactive")</script>';
+                }
+                else{
+                    $qry_deactive = "UPDATE university
+                                   SET approval = 0
+                                   WHERE university_id = $university_id";
+                    mysqli_query($conn, $qry_deactive);
+                    echo '<script>alert("successfully deative")</script>';
+                }
+            }
+        }
+    }
+    //end of deactive university
    }
 ?>
