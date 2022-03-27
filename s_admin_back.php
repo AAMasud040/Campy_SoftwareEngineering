@@ -249,5 +249,16 @@
         
         }
         //end of add a tag to tag table
+
+    //aprove tag
+    if(isset($_POST['tag_approve'])){
+        $tag_name = $_POST['tag_name'];
+        $qry = "UPDATE tag
+                SET status = 1
+                WHERE tag_name = '$tag_name'";
+        mysqli_query($conn, $qry);
+        echo '<script>alert("Approved")</script>';
+    }
+    //end of approve tag
    }
 ?>
