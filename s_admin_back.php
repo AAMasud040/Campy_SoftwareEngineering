@@ -291,5 +291,37 @@
         else  echo '<script>alert("This user id is exist")</script>';
     }
     //end of add admin
+
+    //ban admin
+    if(isset($_POST['remove_admin'])){
+        $admin_u_name = $_POST['admin_u_name'];
+        $qry_admin_check = "SELECT *
+                            FROM university_authority
+                            WHERE user_id = '$admin_u_name'";
+         $admin_check_result = mysqli_query($conn, $qry_admin_check);
+         $admin_count = mysqli_num_rows($admin_check_result);
+         if($admin_count>0){
+            $qry_uni_check = "SELECT *
+            FROM university_authority
+            WHERE Universityuniversity_id = (SELECT Universityuniversity_id
+                                             FROM university_authority WHERE user_id='$admin_u_name')";
+            $check_result = mysqli_query($conn, $qry_uni_check);
+            $count = mysqli_num_rows($check_result);
+            if($count>1){
+                $qry_remove = "DELETE FROM university_authority WHERE user_id = '$admin_u_name'";
+                $remove_result = mysqli_query($conn, $qry_remove);
+                if($remove_result==true){
+                    echo '<script>alert("Successfully Removed")</script>';
+                }
+                else echo '<script>alert("something wrong")</script>';
+            }
+            else{
+                echo '<script>alert("Sorry! A university need atleast 1 admin")</script>';
+            }
+         }
+         else{
+            echo '<script>alert("This user id is not exist")</script>';  
+         }
+    }
    }
 ?>
