@@ -1,3 +1,6 @@
+<?php
+  include "s_admin_back.php";
+?>
 <!DOCTYPE html>
 <html>
 <head>
