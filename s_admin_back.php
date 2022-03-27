@@ -260,5 +260,36 @@
         echo '<script>alert("Approved")</script>';
     }
     //end of approve tag
+
+    //add admin
+    if(isset($_POST['add_admin'])){
+        $admin_u_name = $_POST['admin_u_name'];
+        $university_id = $_POST['university_id'];
+        $pass = $_POST['pass'];
+        $qry_admin_check = "SELECT *
+                            FROM university_authority
+                            WHERE user_id = '$admin_u_name'";
+         $admin_check_result = mysqli_query($conn, $qry_admin_check);
+         $admin_count = mysqli_num_rows($admin_check_result);
+         
+        $qry_id_check = "SELECT *
+                         FROM university
+                         WHERE university_id=$university_id";
+        $check_result = mysqli_query($conn, $qry_id_check);
+        $count = mysqli_num_rows($check_result);
+        if($admin_count==0){
+            if($count>0){
+                $qry = "INSERT INTO university_authority (user_id, Universityuniversity_id, user_pass)
+                    VALUES ('$admin_u_name', $university_id, '$pass')";
+                $result = mysqli_query($conn, $qry);
+                echo '<script>alert("Added")</script>';
+            }
+            else{
+                echo '<script>alert("This university does not exist")</script>';
+            }
+        }
+        else  echo '<script>alert("This user id is exist")</script>';
+    }
+    //end of add admin
    }
 ?>
