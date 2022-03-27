@@ -17,3 +17,10 @@ li a {
     padding: 14px 16px;
     text-decoration: none;
   }
+
+li button{
+    background: transparent;
+    color: white;
+    padding: 14px 16px;
+    border: none;
+  }
