@@ -32,5 +32,26 @@
 
      
     }
+
+    // manage admin
+    if(isset($_POST['mng_admin']))
+    {
+     echo "<form action='' method='POST'>
+     <input name='admin_u_name' type='text' class='input-box' placeholder='User Name' required name='' id=''>
+
+     <input name='university_id' type='text' class='input-box' placeholder='University Id' required name='' id=''>
+
+     <input name='pass' type='password' class='input-box' placeholder='password' required name='' id=''>
+
+     <button name='add_admin' type='submit' class='submit- '>Add admin</button>
+           
+     </form>";
+
+     echo "<form action='' method='POST'>
+     <input name='admin_u_name' type='text' class='input-box' placeholder='User Name' required name='' id=''>
+     <button name='remove_admin' type='submit' class='submit- '>Remove admin</button>
+           
+     </form>";
+    }
    }
 ?>
