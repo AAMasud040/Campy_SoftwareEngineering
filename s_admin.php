@@ -11,6 +11,7 @@
 
 </head>
 <body>
+    <div class="body">
     <!-- navigation bar -->
     <div class="navigation">
     <form action="" method="POST">
@@ -40,8 +41,9 @@
     </div>
 
     <!-- inner body -->
-    <div>
+    <div class="container">
         <?php func(); ?> 
+    </div>
     </div>
     </div>
 
