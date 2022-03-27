@@ -126,5 +126,47 @@
             }
         }
     }
+
+    //logout
+    if(isset($_POST['logout']))
+    {
+     echo " Hello";
+    }
+
+    //add university
+    if(isset($_POST['add_uni']))
+    {
+        $admin_u_name = $_POST['admin_u_name'];
+        $university_name = $_POST['university_name'];
+        $university_email = $_POST['university_email'];
+        $pass = $_POST['pass'];
+
+        $count = 0;
+
+        $exsistCheck = "SELECT *
+                        FROM university_authority
+                        WHERE user_id = '$admin_u_name'";
+         
+        
+         $result = $conn->query($exsistCheck);
+         $count = $result->num_rows;
+        
+        if($count>0){
+         echo '<script>alert("Username Exist, please enter a unique username")</script>';
+        }
+        else {
+            $qry = "INSERT INTO university (university_name, university_email)
+            VALUES ('$university_name', '$university_email')";
+           if (mysqli_query($conn, $qry)) {
+               $last_id = mysqli_insert_id($conn);
+               $qry_admin = "INSERT INTO university_authority (user_id, Universityuniversity_id, user_pass)
+                             VALUES ('$admin_u_name', $last_id, '$pass')";
+               if(mysqli_query($conn, $qry_admin)){
+                 echo '<script>alert("Successfully Added University")</script>';
+               }
+             }
+       }
+    }
+    //end of add university
    }
 ?>
