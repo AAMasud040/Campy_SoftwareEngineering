@@ -168,5 +168,35 @@
        }
     }
     //end of add university
+
+    //active university
+    if(isset($_POST['active_s'])){
+        $university_id = $_POST['university_id'];
+        $qry = "SELECT *
+                FROM university
+                WHERE university_id = $university_id";
+        $result =mysqli_query($conn, $qry);
+        $count = mysqli_num_rows($result);
+        if($count==0){
+            echo '<script>alert("University Does not exist")</script>';
+        }
+        else{
+            while($row = mysqli_fetch_assoc($result)){
+                $status = $row['approval'];
+                $university_name = $row['university_name'];
+                if($status==1){
+                    echo '<script>alert("University is already active")</script>';
+                }
+                else{
+                    $qry_active = "UPDATE university
+                                   SET approval = 1
+                                   WHERE university_id = $university_id";
+                    mysqli_query($conn, $qry_active);
+                    echo '<script>alert("successfully ative")</script>';
+                }
+            }
+        }
+    }
+    //end of active university
    }
 ?>
