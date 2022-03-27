@@ -58,9 +58,20 @@ li a:hover {
   }
   
   .container{
-    height: 100%;
+    /* height: 100%;
     width: 25%;
-    background-color: aquamarine;
+    background-color: aquamarine; */
+    position:absolute;
+    width: 25%;
+    height: 50%;
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(86, 94, 94, 0.877);
+    padding: 55px;
+    box-sizing: border-box;
+    backface-visibility: hidden;
+    box-shadow: 0 0 40px 20px rgba(0,0,0,0.26);
+    align-items: center;
   }
   
   .input-box{

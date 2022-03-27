@@ -42,8 +42,10 @@
 
     <!-- inner body -->
     <div class="container">
-        <?php func(); ?> 
-    </div>
+        <div class="admin_form">
+          <?php func(); ?> 
+        </div>
+        </div>
     </div>
     </div>
 
