@@ -57,4 +57,22 @@ li a:hover {
     display: block;
   }
   
- 
+  .container{
+    height: 100%;
+    width: 25%;
+    background-color: aquamarine;
+  }
+  
+  .input-box{
+    width: 100%;
+    background:transparent;
+    border: 1px solid #fff;
+    margin:6px 0;
+    height: 32px;
+    border-radius: 20px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    outline: none;
+    text-align: center;
+    color:#fff;
+}
