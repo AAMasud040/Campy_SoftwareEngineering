@@ -24,3 +24,11 @@ li button{
     padding: 14px 16px;
     border: none;
   }
+
+li a:hover {
+    background-color: rgb(47, 88, 165);
+  }
+
+.tag:hover .dropdown-content {
+    display: block;
+  }
