@@ -39,7 +39,7 @@
     <!-- inner body -->
     <div>
         <?php func(); ?> 
-  
+    </div>
     </div>
 
 </body>
