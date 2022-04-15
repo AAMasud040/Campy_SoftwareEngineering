@@ -99,7 +99,7 @@ li a:hover {
   .input-box{
     width: 50%;
     background: rgba(209, 212, 221, 0.678);
-    border: 1px solid rgb(38, 20, 202);
+    border: 1px solid rgba(0, 0, 0, 0.26);
     margin:6px 0;
     height: 32px;
     border-radius: 5px;
@@ -113,7 +113,7 @@ li a:hover {
 .submit-btn {
     width: 50%;
     background: rgba(28, 98, 202, 0.411);
-    border:1px solid rgb(23, 40, 189);
+    /* border:1px solid rgb(23, 40, 189); */
     margin: 35px 0 10px;
     height: 32px;
     font-size: 12px;
@@ -126,12 +126,13 @@ li a:hover {
 }
 
 table {
+  margin: 25px;
   border-collapse: collapse;
   width: 90%;
   color: #000000;
   /* font-family: monospace; */
   font-size: 15px;
-  text-align: left;
+  text-align: center;
 }
 
 th {
