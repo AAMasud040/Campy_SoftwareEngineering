@@ -89,7 +89,7 @@
          echo "<h2>No Pending Tag<h2>";
      }
      else{
-         echo"<table border=1>
+         echo"<table>
          <tr>
            <th>Tag Name</th>
            <th>Status</th>

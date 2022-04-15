@@ -16,7 +16,16 @@ ul {
  
   li {
     float: left;
-  } 
+  }
+  
+li h4{
+  display: block;
+  color: white;
+  text-align: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  text-decoration: none;
+}
 
 li a {
     display: block;
@@ -93,7 +102,7 @@ li a:hover {
     border: 1px solid rgb(38, 20, 202);
     margin:6px 0;
     height: 32px;
-    border-radius: 20px;
+    border-radius: 5px;
     padding: 0 10px;
     box-sizing: border-box;
     outline: none;
@@ -103,12 +112,12 @@ li a:hover {
 
 .submit-btn {
     width: 50%;
-    background: rgba(11, 224, 57, 0.411);
+    background: rgba(28, 98, 202, 0.411);
     border:1px solid rgb(23, 40, 189);
     margin: 35px 0 10px;
     height: 32px;
     font-size: 12px;
-    border-radius: 20px;
+    border-radius: 5px;
     padding:0 10px;
     box-sizing: border-box;
     outline:none;
@@ -120,7 +129,7 @@ table {
   border-collapse: collapse;
   width: 90%;
   color: #000000;
-  font-family: monospace;
+  /* font-family: monospace; */
   font-size: 15px;
   text-align: left;
 }
@@ -130,4 +139,6 @@ th {
   color: white;
 }
 
-tr:nth-child(even) {background-color: #f2f2f2;}
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}

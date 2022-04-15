@@ -17,6 +17,7 @@
     <form action="" method="POST">
     <ul>
         <div class="options">
+        <li><h4>C a m p y</h4></li>
         <li><a><button name="Add_uni">Add University</button></a></li>
 
         <li><a><button name="Uni_status" type="submit">University Status</button></a></li>
