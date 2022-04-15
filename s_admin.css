@@ -115,3 +115,19 @@ li a:hover {
     color: rgb(0, 0, 0);
     cursor: pointer;
 }
+
+table {
+  border-collapse: collapse;
+  width: 90%;
+  color: #000000;
+  font-family: monospace;
+  font-size: 15px;
+  text-align: left;
+}
+
+th {
+  background-color:	#000000;
+  color: white;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
