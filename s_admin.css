@@ -1,6 +1,7 @@
 body{
   display: flex;
   flex-direction: column;
+  font-family: sans-serif;
 }
 ul {
     
@@ -43,7 +44,7 @@ li button{
   }
 
 li a:hover {
-    background-color: rgb(47, 88, 165);
+    background-color: rgba(47, 88, 165, 0.514);
   }
 
 .tag:hover .dropdown-content {
