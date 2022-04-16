@@ -51,7 +51,20 @@ let Enrollinto_course = async(req,res) =>{
     res.redirect('/course')
 }
 let getEnrolled_courses = async(req,res)=>{
-    
+    let enrolled = await appModel.getEnrolledcourseList(id);
+    let crslist = await appModel.get_course_list(1);
+
+    let array1 = enrolled.map(x=>{
+        return x.courses_classroomcoursescourse_id;
+    });
+
+    let crsinfo = crslist.filter(function(n) {
+        if(array1.indexOf(n.course_id) !== -1)
+              return n;
+    });
+
+    console.log(crsinfo);
+    res.send(crsinfo);
 }
 module.exports ={
     get_student,
