@@ -63,8 +63,8 @@ let getEnrolled_courses = async(req,res)=>{
               return n;
     });
 
-    console.log(crsinfo);
-    res.send(crsinfo);
+    data = {crsinfo}
+    res.render('enrolledCourse.ejs',data);
 }
 module.exports ={
     get_student,
