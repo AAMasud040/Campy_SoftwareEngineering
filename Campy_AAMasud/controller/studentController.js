@@ -25,14 +25,17 @@ let get_course_list = async (req,res) =>{
         let array2 = r2.map(x=>{
             return x.courses_classroomcoursescourse_id;
         });
-        // console.log(array2);
+        
         let array3 = array1.filter(function(val) {
             return array2.indexOf(val) == -1;
         });
 
         console.log(array3);
-
-        res.send(r1)
+        let array4 = r1.filter(function(n) {
+            if(array3.indexOf(n.course_id) !== -1)
+                  return n;
+        });
+        res.send(array4);
     }
     else
     {
