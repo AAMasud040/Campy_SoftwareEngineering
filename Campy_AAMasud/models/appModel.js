@@ -23,9 +23,16 @@ let enrollIntoCourseClassroom = async(cid,uid)=>{
     let result = await query(sqlCommand);
     return result;
 }
+let getfullTaglist = async()=>{
+    let sqlCommand = "SELECT tag_name FROM tag WHERE status = 1";
+    let result = await query(sqlCommand);
+    console.log(result);
+    return result;
+}
 module.exports={
     get_all_student_request,
     get_course_list,
     getEnrolledcourseList,
-    enrollIntoCourseClassroom
+    enrollIntoCourseClassroom,
+    getfullTaglist
 }

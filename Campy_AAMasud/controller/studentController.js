@@ -71,7 +71,14 @@ let viewCourses = async(req,res)=>{
     res.render('viewCourse.ejs');
 }
 let addTag = async(req,res)=>{
-    res.render('addtag.ejs');
+    let tags = await appModel.getfullTaglist();
+    data = {tags}
+    res.render('addtag.ejs',data);
+}
+let insertTag = async(req,res)=>{
+    let name = req.body;
+    console.log(name);
+    res.redirect('/addTag');
 }
 module.exports ={
     get_student,
@@ -79,5 +86,6 @@ module.exports ={
     Enrollinto_course,
     getEnrolled_courses,
     viewCourses,
-    addTag
+    addTag,
+    insertTag
 }

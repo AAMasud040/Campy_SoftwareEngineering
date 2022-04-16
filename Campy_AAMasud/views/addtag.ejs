@@ -47,16 +47,25 @@
     <div class="pusher">
         <div class="ui container" style="padding-top: 100px;">
             <!-- put everything here -->
-            <% if(data.crsinfo.length == 0) {%>
-                <h1>You have no courses Enrolled</h1>
-            <% }else{%>
-                <% data.crsinfo.map( (val) =>{ %> 
-                    <hr>
-                        <h3>Course ID : <%= val.course_id %> | Course name : <%= val.course_name %> <a href="/viewCourse"><button>View</button></a> </h3>
-                    <hr>
-                <% }) %>
-            <% } %>   
             
+            
+            <select name="tags" id="tag">
+                <% if(data.tags.length == 0){ %>
+                    <option disabled value=""> No tag available </option>
+                <% } else{ %>
+                    <% data.tags.map( (val) =>{ %> 
+                        <option value=""> <%= val.tag_name %> </option>
+                    <% }) %>
+                <% } %>   
+            </select>
+            
+            <form action="/addTag" method="POST">
+                <h3>Tag Name:</h3>
+                <input type="text" id="name1" name="name1" placeholder="Tag name">                
+                <input type="submit" value="Submit">
+            </form>
+
+            <!-- put everything up -->
         </div>
     </div>
     
