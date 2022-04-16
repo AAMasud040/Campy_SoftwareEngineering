@@ -20,10 +20,9 @@
         "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js">
 	</script>
     <link rel="stylesheet" href="base_designcss.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
-<body style="height:2000px;">
+<body>
 	<div class="ui sidebar vertical left inverted menu">
 		<a class="item">Web Development</a>
 		<a class="item">Machine Learning</a>
@@ -51,28 +50,12 @@
     <div class="pusher">
         <div class="ui container" style="padding-top: 100px;">
             <!-- put everything here -->
-            
-            <button id="but1" onclick="fetch1()">Click</button>
-            
-            <ul class="messages"></ul>
-            <script>
-                function fetch1(){
-                    console.log("clicked");
-                    $.ajax({
-                        url:'http://127.0.0.1:3000/',
-                        // url:'https://newsapi.org/v2/top-headlines?country=us&apiKey=44eca781d6fb4e2da8fd8e7969b3b375',
-                        type:"GET",
-                        dataType:"text",
-                        // data:JSON.stringify({}),
-                        success:function(data){
-                            console.log(data);
-                            // console.log(JSON.stringify(data));
-                            // $('.messages').append("<li>"+JSON.stringify(data)+"</li>");
-                            $('.messages').append("<li>"+data+"</li>");
-                        }
-                    });
-                }
-            </script>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis sed ducimus quam optio officiis neque veritatis ipsa, soluta asperiores nisi quae consequuntur aspernatur autem maiores magnam sint debitis fuga dolores!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis dolores, aspernatur deserunt ducimus eius excepturi necessitatibus amet totam nesciunt eaque sint, nostrum delectus est quisquam, sapiente illum officia quod voluptates?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quaerat sed, eum voluptate magni non excepturi quod ipsum incidunt? Expedita, maiores. Ullam repudiandae asperiores itaque odio explicabo quia animi reiciendis?
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas, magnam? Esse recusandae velit quo numquam et. Iusto labore dolores officiis nisi ipsam libero quos voluptates dolore ducimus odio. Minus, quasi!
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates mollitia a atque nihil, consectetur modi laudantium ratione deleniti blanditiis laborum voluptatibus delectus, sit porro recusandae sint vitae deserunt, similique suscipit.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia expedita magnam aliquid enim, laborum impedit. Excepturi architecto sapiente quos consectetur. Animi vitae inventore iure mollitia modi quaerat facilis obcaecati voluptate.
         </div>
     </div>
     

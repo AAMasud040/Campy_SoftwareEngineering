@@ -6,5 +6,6 @@ const router = express.Router();
 
 router.get('/' ,studentController.get_student);
 router.get('/course', studentController.get_course_list);
+router.get('/enroll', studentController.Enrollinto_course);
 module.exports = router;
 

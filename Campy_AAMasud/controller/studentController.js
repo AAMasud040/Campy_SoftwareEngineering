@@ -30,19 +30,28 @@ let get_course_list = async (req,res) =>{
             return array2.indexOf(val) == -1;
         });
 
-        console.log(array3);
+        // console.log(array3);
         let array4 = r1.filter(function(n) {
             if(array3.indexOf(n.course_id) !== -1)
                   return n;
         });
-        res.send(array4);
+        // console.log(array4);
+        data =  {array4};
+        res.render("addCourse.ejs",data);
     }
     else
     {
         res.send(404);
     }
 }
+
+let Enrollinto_course = async(req,res) =>{
+    let val = req.query.cid;
+    let r = await appModel.enrollIntoCourseClassroom(val,id); 
+    res.redirect('/course')
+}
 module.exports ={
     get_student,
-    get_course_list
+    get_course_list,
+    Enrollinto_course
 }
