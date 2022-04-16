@@ -29,10 +29,23 @@ let getfullTaglist = async()=>{
     console.log(result);
     return result;
 }
+let CheckTag = async(name)=>{
+    let sqlCommand = "SELECT COUNT(*) FROM tag WHERE tag_name = '"+name+"'";
+    let result = await query(sqlCommand);
+    console.log(result);
+    return result;
+}
+let InsertTag = async(name)=>{
+    let sqlCommand = "INSERT INTO `tag`(`tag_name`, `status`) VALUES ('"+name+"','1')";
+    let result = await query(sqlCommand);
+    return result;
+}
 module.exports={
     get_all_student_request,
     get_course_list,
     getEnrolledcourseList,
     enrollIntoCourseClassroom,
-    getfullTaglist
+    getfullTaglist,
+    CheckTag,
+    InsertTag
 }

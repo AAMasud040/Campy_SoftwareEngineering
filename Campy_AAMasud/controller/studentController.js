@@ -1,3 +1,4 @@
+const e = require('express');
 const appModel = require('../models/appModel');
 const id = '011183040';
 let get_student = async (req, res) => {
@@ -76,9 +77,18 @@ let addTag = async(req,res)=>{
     res.render('addtag.ejs',data);
 }
 let insertTag = async(req,res)=>{
-    let name = req.body;
-    console.log(name);
-    res.redirect('/addTag');
+    let name = req.body.name1;
+    let r1 = await appModel.CheckTag(name);
+    if(r1 != 0)
+    {
+        let r2 = await appModel.InsertTag(name); 
+        
+        res.redirect('/addTag');
+    }
+    else{
+        res.send("Tag Exists !")
+    }
+   
 }
 module.exports ={
     get_student,
