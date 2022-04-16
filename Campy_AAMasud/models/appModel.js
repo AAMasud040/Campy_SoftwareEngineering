@@ -8,6 +8,12 @@ let get_all_student_request = async(uniid)=> //authority, unapproved student dis
     return result;
 }
 
+let get_course_list = async(uniid)=>{
+    let sqlCommand = "SELECT * FROM student WHERE approval=1 AND Universityuniversity_id='"+uniid+"'";
+    let result = await query(sqlCommand);
+    return result;
+}
 module.exports={
-    get_all_student_request
+    get_all_student_request,
+    get_course_list
 }
