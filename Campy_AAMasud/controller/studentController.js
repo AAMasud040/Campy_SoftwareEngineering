@@ -66,9 +66,14 @@ let getEnrolled_courses = async(req,res)=>{
     data = {crsinfo}
     res.render('enrolledCourse.ejs',data);
 }
+
+let viewCourses = async(req,res)=>{
+    res.render('viewCourse.ejs');
+}
 module.exports ={
     get_student,
     get_course_list,
     Enrollinto_course,
-    getEnrolled_courses
+    getEnrolled_courses,
+    viewCourses
 }

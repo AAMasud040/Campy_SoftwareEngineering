@@ -8,5 +8,6 @@ router.get('/' ,studentController.get_student);
 router.get('/course', studentController.get_course_list);
 router.get('/enroll', studentController.Enrollinto_course);
 router.get('/enrolledCourses', studentController.getEnrolled_courses);
+router.get('/viewCourse',studentController.viewCourses);
 module.exports = router;
 
