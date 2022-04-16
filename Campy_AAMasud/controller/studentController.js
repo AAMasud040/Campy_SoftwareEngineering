@@ -50,8 +50,12 @@ let Enrollinto_course = async(req,res) =>{
     let r = await appModel.enrollIntoCourseClassroom(val,id); 
     res.redirect('/course')
 }
+let getEnrolled_courses = async(req,res)=>{
+    
+}
 module.exports ={
     get_student,
     get_course_list,
-    Enrollinto_course
+    Enrollinto_course,
+    getEnrolled_courses
 }
