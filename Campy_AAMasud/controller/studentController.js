@@ -70,10 +70,14 @@ let getEnrolled_courses = async(req,res)=>{
 let viewCourses = async(req,res)=>{
     res.render('viewCourse.ejs');
 }
+let addTag = async(req,res)=>{
+    res.render('addtag.ejs');
+}
 module.exports ={
     get_student,
     get_course_list,
     Enrollinto_course,
     getEnrolled_courses,
-    viewCourses
+    viewCourses,
+    addTag
 }
