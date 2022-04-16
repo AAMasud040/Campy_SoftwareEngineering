@@ -9,11 +9,17 @@ let get_all_student_request = async(uniid)=> //authority, unapproved student dis
 }
 
 let get_course_list = async(uniid)=>{
-    let sqlCommand = "SELECT * FROM student WHERE approval=1 AND Universityuniversity_id='"+uniid+"'";
+    let sqlCommand = "SELECT * FROM courses WHERE Universityuniversity_id='"+uniid+"'";
+    let result = await query(sqlCommand);
+    return result;
+}
+let getEnrolledcourseList = async(id)=>{
+    let sqlCommand = "SELECT * FROM student_course_classroom WHERE Studentuser_id='"+id+"'";
     let result = await query(sqlCommand);
     return result;
 }
 module.exports={
     get_all_student_request,
-    get_course_list
+    get_course_list,
+    getEnrolledcourseList
 }
