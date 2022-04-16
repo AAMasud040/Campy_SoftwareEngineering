@@ -47,7 +47,15 @@
     <div class="pusher">
         <div class="ui container" style="padding-top: 100px;">
             <!-- put everything here -->
-            
+            <% if(data.crsinfo.length == 0) {%>
+                <h1>You have no courses Enrolled</h1>
+            <% }else{%>
+                <% data.crsinfo.map( (val) =>{ %> 
+                    <hr>
+                        <h3>Course ID : <%= val.course_id %> | Course name : <%= val.course_name %> <a href="/viewCourse"><button>View</button></a> </h3>
+                    <hr>
+                <% }) %>
+            <% } %>   
             
         </div>
     </div>
