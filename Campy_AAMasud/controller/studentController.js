@@ -79,7 +79,8 @@ let addTag = async(req,res)=>{
 let insertTag = async(req,res)=>{
     let name = req.body.name1;
     let r1 = await appModel.CheckTag(name);
-    if(r1 != 0)
+    console.log(r1[0].c);
+    if(r1[0].c == 0)
     {
         let r2 = await appModel.InsertTag(name); 
         

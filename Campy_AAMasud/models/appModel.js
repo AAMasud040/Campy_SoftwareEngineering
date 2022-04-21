@@ -30,7 +30,7 @@ let getfullTaglist = async()=>{
     return result;
 }
 let CheckTag = async(name)=>{
-    let sqlCommand = "SELECT COUNT(*) FROM tag WHERE tag_name = '"+name+"'";
+    let sqlCommand = "SELECT COUNT(*) as c FROM tag WHERE tag_name = '"+name+"'";
     let result = await query(sqlCommand);
     console.log(result);
     return result;
