@@ -45,10 +45,27 @@
     <!-- inner body -->
     <div class="container">
        
-          <?php func(); ?> 
+          <?php func(); ?>
         
         </div>
     </div>
+
+    <script>
+        document.querySelector('#btnX').addEventListener(
+            'click', () => {
+                fetch('http://localhost/CAMPY/Campy_Anamul/tag_list.php')
+                .then(res => res.json())
+                .then(data => {
+                    let html = "";
+                    for (let i = 0; i < data.content.length; i++) {
+						html += data.content[i]
+					}
+                    console.log(html)
+                    document.querySelector(".container").innerHTML = html;
+                })
+            }
+        )
+    </script>
 
 </body>
 </html>
