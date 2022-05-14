@@ -146,7 +146,7 @@
     //logout
     if(isset($_POST['logout']))
     {
-     echo " Hello";
+      header("Location: .../CAMPY/index.php");
     }
 
     //add university
