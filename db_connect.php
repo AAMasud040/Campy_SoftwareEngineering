@@ -2,7 +2,7 @@
   $username = "root";
   $servername = "localhost";
   $password = "";
-  $db_name = "campyv4";
+  $db_name = "campy";
 
   $conn = new mysqli($servername, $username, $password, $db_name);
 
