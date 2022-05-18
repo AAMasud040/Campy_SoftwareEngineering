@@ -28,7 +28,7 @@
             <div class="dropdown-content">
                 <a><button name="add_tag" type="submit">Add tag</button></a>
                 <a><button name="tag_requ" type="submit">Tag Requests</button></a>
-                <a><button name="tag_list" type="submit" id="btnX">Tag List</button></a>
+                <a><button name="tag_list" id="btnX">Tag List</button></a>
             </div></li>
 
         <li><a><button name="uni_list" type="submit">University List</button></a></li>

@@ -10,7 +10,6 @@ $count = mysqli_num_rows($result);
 $content[] = "<table>
          <tr>
            <th>Tag Name</th>
-           <th>Status</th>
          </tr>";
 while ($row = mysqli_fetch_assoc($result)) {
             $tag_name = $row['tag_name'];
@@ -21,6 +20,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                 ";
         
     }
+$content[]  ="</table>";
 
 $data = ["status" => "ok", "content" => $content];
 header('Content-type: application/json');
