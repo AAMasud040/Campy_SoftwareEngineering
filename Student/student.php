@@ -39,7 +39,7 @@
             Dropdown
             <i class="dropdown icon"></i>
             <div class="menu">
-              <div class="item">Choice 1</div>
+              <div class="item"><button type="submit" id="profile">Profile</button></div>
               <div class="item">Choice 2</div>
               <div class="item">Choice 3</div>
               <div class="item">Choice 3</div>
