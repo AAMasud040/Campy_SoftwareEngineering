@@ -19,7 +19,7 @@
 	<script src=
         "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js">
 	</script>
-    <link rel="stylesheet" href="base_designcss.css">
+    <link rel="stylesheet" href="student.css">
 </head>
 
 <body>
@@ -48,7 +48,7 @@
     </div>
 
     <div class="pusher">
-        <div class="ui container" style="padding-top: 100px;">
+        <div class="ui_container" style="padding-top: 100px;">
             <!-- put everything here -->
             
         </div>
@@ -60,7 +60,20 @@
         $("#toggle").click(function(){
             $('.ui.sidebar').sidebar('toggle');
         });
-        
+        document.querySelector('#profile').addEventListener(
+            'click', () => {
+                fetch('http://localhost/Campy_Anamul/Student/student_back.php')
+                .then(res => res.json())
+                .then(data => {
+                    let html = "";
+                   
+					html += data.content;
+					
+                    console.log(html)
+                    document.querySelector(".ui_container").innerHTML = html;
+                })
+            }
+        );
 	</script>
 </body>
 </html>
