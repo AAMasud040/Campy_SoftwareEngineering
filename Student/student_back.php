@@ -12,5 +12,7 @@
     $approval = $row['approval'];
     $status = $row['status'];
 
-    $qry2 = "SELECT * FROM university WHERE university_id = $University_id"
+    $qry2 = "SELECT * FROM university WHERE university_id = $University_id";
+    $result2 = mysqli_query($conn, $qry2);
+    $row2 = mysqli_fetch_assoc($result2);
 ?>
