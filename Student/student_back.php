@@ -24,4 +24,8 @@
                  <h3>Your Email: $email<h3>
                  <h3>Student of $university_name<h3>
                  </div>";
+                 
+    $data = ["status" => "ok", "content" => $content];
+    header('Content-type: application/json');
+    echo json_encode($data);
 ?>

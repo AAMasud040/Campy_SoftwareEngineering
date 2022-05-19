@@ -25,3 +25,5 @@ $content[]  ="</table>";
 $data = ["status" => "ok", "content" => $content];
 header('Content-type: application/json');
 echo json_encode($data);
+
+?>
