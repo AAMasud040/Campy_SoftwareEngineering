@@ -18,13 +18,15 @@
 
     $university_name = $row2['university_name'];
 
-    $content = "<div id='profileView'>
+    $content = "<form action='' method='POST'>
+                <div id='profileView'>
                  <h1>Name: $name</h1>
-                 <h3>Student Id: $id<h3>
-                 <h3>Your Email: $email<h3>
-                 <h3>Student of $university_name<h3>
-                 <button type='submit' id='edit'>Edit</button>
-                 </div>";
+                 <h3>Student Id: $id</h3>
+                 <h3>Your Email: $email</h3>
+                 <h3>Student of $university_name</h3>
+                 <button type = 'submit' name = 'edit_profile' id='edit'>Edit</button>
+                 </div>
+                 </form>";
 
     $data = ["status" => "ok", "content" => $content];
     header('Content-type: application/json');
