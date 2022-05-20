@@ -79,20 +79,24 @@
                     $result_insert = mysqli_query($conn, $insert);
 
                     if($new_pass !=''){
-                         $insert = "UPDATE student
+                         $update = "UPDATE student
                               SET user_pass = '$new_pass'
                               WHERE user_id = $id";
-                         $result_insert = mysqli_query($conn, $insert);
+                         $result_update = mysqli_query($conn, $update);
                     }
                     if($count == 0){
                          if($new_github != ''|| $new_linkedIn !='' || $new_facebook != ''){
-                              $insert2 = "INSERT INTO student_work_profile(student_id,skills,github, linkedIn,facebook)
+                              $insert = "INSERT INTO student_work_profile(student_id,skills,github, linkedIn,facebook)
                                         VALUES ('$id','$new_skills', '$new_github', '$new_linkedIn', '$new_facebook')";
-                              $result_insert2 = mysqli_query($conn, $insert2);
+                              $result_insert = mysqli_query($conn, $insert);
                          }
                     }
 
                     else{
+                         $update2 = "UPDATE student_work_profile
+                                   SET skills = '$new_skills', github = '$new_github', linkedIn = '$new_linkedIn', facebook = '$new_facebook';
+                                   WHERE user_id = $id";
+                         $result_update2 = mysqli_query($conn, $update2);
 
                     }
 
