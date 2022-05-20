@@ -18,6 +18,10 @@
 
     $university_name = $row2['university_name'];
 
+    $qry3 = "SELECT * FROM student_work_profile WHERE student_id = $id";
+    $result3 = mysqli_query($conn, $qry3);
+    $row = mysqli_fetch_assoc($result3);
+
     $content = "<form action='' method='POST'>
                 <div id='profileView'>
                  <h1>Name: $name</h1>
@@ -25,7 +29,7 @@
                  <h3>Your Email: $email</h3>
                  <h3>Student of $university_name</h3>
                  <label>skills</label>
-                 
+
                  <button name = 'edit_profile' id='edit'>Edit</button>
                  </div>
                  </form>";
