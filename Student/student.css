@@ -1,3 +1,50 @@
 body{
     font-family: 'Quicksand', sans-serif;
 }
+
+.edit_form{
+  position:absolute;
+  width: 40%;
+  height: 70%;
+  /* background-position: center;
+  background-size: cover; */
+  /* background-color: transparent; */
+  padding: 55px;
+  box-sizing: border-box;
+  backface-visibility: hidden;
+  box-shadow: 0 0 40px 20px rgba(0,0,0,0.26);
+  background-color: lightgray;
+  position: relative;
+  text-align: center;
+  border-radius: 20px;
+  
+}
+
+ .input-box{
+    width: 50%;
+    background: rgba(209, 212, 221, 0.678);
+    border: 1px solid rgba(0, 0, 0, 0.26);
+    margin:6px 0;
+    height: 32px;
+    border-radius: 5px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    outline: none;
+    text-align: center;
+    color:rgb(0, 0, 0);
+}
+
+.submit-btn {
+    width: 50%;
+    background: rgba(28, 98, 202, 0.411);
+    /* border:1px solid rgb(23, 40, 189); */
+    margin: 35px 0 10px;
+    height: 32px;
+    font-size: 12px;
+    border-radius: 5px;
+    padding:0 10px;
+    box-sizing: border-box;
+    outline:none;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}

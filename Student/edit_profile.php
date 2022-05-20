@@ -41,8 +41,8 @@
 
           if(isset($_POST['edit_profile'])){
                echo "<form action='' method='POST'>
+                    <div class = 'edit_form'>
                     <input name='name' type='text' class='input-box' value ='$name'>
-     
                     <input name='email' type='text' class='input-box' value ='$email'>
                     <input name='skills' type='text' class='input-box' value ='$skills'>
                     <input name='github' type='text' class='input-box' value ='$github'>
@@ -51,7 +51,7 @@
                     <input name='new_pass' type='password' class='input-box' placeholder='new password' value =''>
                     <input name='old_pass' type='password' class='input-box' placeholder='Old password' value =''>
                     <button name='save' type='submit' class='submit-btn'>Save</button>
-     
+                    </div>
                     </form>";
           }
 
