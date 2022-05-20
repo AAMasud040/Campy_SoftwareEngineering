@@ -35,19 +35,23 @@
 
           if(isset($_POST['edit_profile'])){
                echo "<form action='' method='POST'>
-                    <input name='user_name' type='text' class='input-box' required name='' value ='$name'>
+                    <input name='user_name' type='text' class='input-box' value ='$name'>
      
-                    <input name='gmail' type='text' class='input-box' required name='' value ='$email'>
-                    <input name='gmail' type='text' class='input-box' required name='' value ='$skills'>
-                    <input name='gmail' type='text' class='input-box' required name='' value ='$github'>
-                    <input name='gmail' type='text' class='input-box' required name='' value ='$linkedIn'>
-                    <input name='gmail' type='text' class='input-box' required name='' value ='$facebook'>
+                    <input name='gmail' type='text' class='input-box' value ='$email'>
+                    <input name='gmail' type='text' class='input-box' value ='$skills'>
+                    <input name='gmail' type='text' class='input-box' value ='$github'>
+                    <input name='gmail' type='text' class='input-box' value ='$linkedIn'>
+                    <input name='gmail' type='text' class='input-box' value ='$facebook'>
 
                     <input name='old_pass' type='password' class='input-box' placeholder='Old password' required name=''>
                     <input name='pass' type='password' class='input-box' placeholder='new password' required name=''>
                     <button name='add_uni' type='submit' class='submit-btn'>Save</button>
      
                     </form>";
+          }
+
+          if(isset($_POST['edit_profile'])){
+               $new_name = $_POST['admin_u_name'];
           }
 
           
