@@ -20,12 +20,23 @@
 
     $qry3 = "SELECT * FROM student_work_profile WHERE student_id = $id";
     $result3 = mysqli_query($conn, $qry3);
+    $count = mysqli_num_rows($result3);
     $row3 = mysqli_fetch_assoc($result3);
+    if($count == 0){
+        $skills = '';
+        $github = '';
+        $linkedIn = '';
+        $facebook = '';
 
-    $skills = $row3['skills'];
-    $github = $row3['github'];
-    $linkedIn = $row3['linkedIn'];
-    $facebook = $row3['facebook'];
+    }
+
+    else{
+        $skills = $row3['skills'];
+        $github = $row3['github'];
+        $linkedIn = $row3['linkedIn'];
+        $facebook = $row3['facebook'];
+    }
+    
 
 
     $content = "<form action='' method='POST'>
