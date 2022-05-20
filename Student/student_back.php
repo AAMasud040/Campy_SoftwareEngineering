@@ -24,7 +24,7 @@
                  <h3>Student Id: $id</h3>
                  <h3>Your Email: $email</h3>
                  <h3>Student of $university_name</h3>
-                 <button type = 'submit' name = 'edit_profile' id='edit'>Edit</button>
+                 <button name = 'edit_profile' id='edit'>Edit</button>
                  </div>
                  </form>";
 
