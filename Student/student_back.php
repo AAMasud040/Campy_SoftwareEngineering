@@ -35,6 +35,11 @@
                  <h3>Your Email: $email</h3>
                  <h3>Student of $university_name</h3>
                  <label>skills</label>
+                 <h3>$skills</h3>
+                 <a href='$github'>github</a>
+                 <a href='$linkedIn'>linkedIn</a>
+                 <a href='$facebook'>facebook</a>
+
 
                  <button name = 'edit_profile' id='edit'>Edit</button>
                  </div>
