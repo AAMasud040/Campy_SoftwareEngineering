@@ -47,9 +47,9 @@
                     <input name='name' type='text' class='input-box' value ='$name'>
                     <input name='email' type='text' class='input-box' value ='$email'>
                     <input name='skills' type='text' class='input-box' value ='$skills'>
-                    <input name='github' type='text' class='input-box' value ='$github'>
-                    <input name='linkedIn' type='text' class='input-box' value ='$linkedIn'>
-                    <input name='facebook' type='text' class='input-box' value ='$facebook'>
+                    <input name='github' type='url' class='input-box' value ='$github'>
+                    <input name='linkedIn' type='url' class='input-box' value ='$linkedIn'>
+                    <input name='facebook' type='url' class='input-box' value ='$facebook'>
                     <input name='new_pass' type='password' class='input-box' placeholder='new password' value =''>
                     <input name='old_pass' type='password' class='input-box' placeholder='Old password' value =''>
                     <button name='save' type='submit' class='submit-btn'>Save</button>
@@ -82,7 +82,18 @@
                          $insert = "UPDATE student
                               SET user_pass = '$new_pass'
                               WHERE user_id = $id";
-                    $result_insert = mysqli_query($conn, $insert);
+                         $result_insert = mysqli_query($conn, $insert);
+                    }
+                    if($count == 0){
+                         if($new_github != ''|| $new_linkedIn !='' || $new_facebook != ''){
+                              $insert2 = "INSERT INTO student_work_profile(student_id,skills,github, linkedIn,facebook)
+                                        VALUES ('$id','$new_skills', '$new_github', '$new_linkedIn', '$new_facebook')";
+                              $result_insert2 = mysqli_query($conn, $insert2);
+                         }
+                    }
+
+                    else{
+
                     }
 
                      echo "<script>alert('Profile successfully updated')</script>";

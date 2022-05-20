@@ -60,3 +60,21 @@ body{
     color: rgb(0, 0, 0);
     cursor: pointer;
 }
+
+#profileView{
+  position:absolute;
+  width: 40%;
+  height: 70%;
+  /* background-position: center;
+  background-size: cover; */
+  /* background-color: transparent; */
+  padding: 55px;
+  box-sizing: border-box;
+  backface-visibility: hidden;
+  box-shadow: 0 0 40px 20px rgba(0,0,0,0.26);
+  background-color: lightgray;
+  position: relative;
+  text-align: center;
+  border-radius: 20px;
+  
+}
