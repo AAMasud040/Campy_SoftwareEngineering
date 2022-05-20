@@ -39,8 +39,9 @@
     
 
 
-    $content = "<form action='' method='POST'>
-                <div id='profileView'>
+    $content = "<div id='profileView'>
+                <form action='' method='POST'>
+                
                  <h1>Name: $name</h1>
                  <h3>Student Id: $id</h3>
                  <h3>Your Email: $email</h3>
@@ -53,8 +54,9 @@
 
 
                  <button name = 'edit_profile' id='edit'>Edit</button>
-                 </div>
-                 </form>";
+                 
+                 </form>
+                 </div>";
 
     $data = ["status" => "ok", "content" => $content];
     header('Content-type: application/json');

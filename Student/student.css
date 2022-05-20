@@ -2,6 +2,18 @@ body{
     font-family: 'Quicksand', sans-serif;
 }
 
+ .ui_container{
+    /* height: 100%;
+    width: 25%;
+    background-color: aquamarine; */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* color: red; */
+  }
+
 .edit_form{
   position:absolute;
   width: 40%;
